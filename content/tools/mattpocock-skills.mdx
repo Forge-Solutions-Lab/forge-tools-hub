@@ -1,0 +1,52 @@
+---
+title: "Matt Pocock Skills (AI Hero)"
+description: "ชุด AI Skills และ Workflow สำหรับพัฒนาโปรเจกต์ TypeScript, Architecture Review และ Bug Diagnosis อย่างเป็นระบบ"
+category: "AI Skills / Prompt"
+tags: ["TypeScript", "Architecture", "Debugging", "TDD", "Spec", "Claude", "Cursor"]
+works_with: ["Claude Code", "Cursor", "Windsurf", "VSCode"]
+install_difficulty: "easy"
+source_url: "https://aihero.dev"
+github_url: "https://github.com/total-typescript/ai-hero"
+added_by: "phongdanai"
+added_date: "2026-09-25"
+status: "recommended"
+featured: true
+read_time: "5 min read"
+---
+
+## มันคืออะไร?
+ชุด AI Engineering & Productivity Skills ที่ออกแบบโดย Matt Pocock (ผู้สร้าง Total TypeScript) เพื่อเปลี่ยน AI จากการเป็นแค่ Text Generator ให้กลายเป็น Senior Engineer ที่ทำงานตามมาตรฐานระดับสากล ผ่านกระบวนการ `Grill -> Spec -> Tickets -> TDD -> Code Review`
+
+## ใช้ทำอะไรได้บ้าง?
+- **Grilling (`/grill-with-docs`):** สัมภาษณ์เจาะลึกเพื่อเคลียร์ Requirement ให้กระจ่างก่อนลงมือเขียนโค้ด
+- **Architecture Modeling (`/domain-modeling`):** จัดทำ Glossary และ Architecture Decision Records (ADRs) เพื่อคุมทิศทางโปรเจกต์
+- **Systematic Bug Diagnosis (`/diagnosing-bugs`):** สร้าง Feedback Loop ที่รัดกุมก่อนตั้งสมมติฐานและแก้บั๊ก
+- **Test-Driven Implementation (`/implement` & `/tdd`):** เขียนการทดสอบและโค้ดทีละ Slice อย่างมีวินัย
+
+<BeforeAfter>
+  <Before>
+    เริ่มสั่งให้ AI เขียนโค้ดทันทีโดยไม่มี Architecture Plan ชัดเจน โค้ดหลุดสเปก และต้องมานั่งแก้โครงสร้างใหม่หมด
+  </Before>
+  <After>
+    AI ซักถามจนชัดเจน บันทึก ADRs และ Context Glossary ลงดิสก์ แล้วเขียนโค้ดตาม Spec พร้อม Test Coverage ครบถ้วน
+  </After>
+</BeforeAfter>
+
+## เหมาะกับใคร?
+- นักพัฒนา Frontend และ Full-stack ที่ต้องการมาตรฐานระดับสูงในโปรเจกต์ TypeScript / Node.js
+- ทีมที่ต้องการควบคุมให้ AI เขียนโค้ดตาม Architecture และ Design Patterns ที่ถูกต้อง
+
+<QuickInstall
+  title="Link Skills into Local Harness"
+  type="cli"
+  command="./skills-agent/skills-main/scripts/link-skills.sh"
+/>
+
+## Flow การทำงานหลัก
+1. **`/grill-with-docs`**: เค้น Requirement และบันทึก `CONTEXT.md`
+2. **`/to-spec` & `/to-tickets`**: แปลงเป็นแผนงานและแตกเป็น Task ย่อย
+3. **`/implement`**: พัฒนาด้วย TDD และตรวจสอบ Code Review ก่อน Commit
+
+## ลิงก์ที่ควรอ่านต่อ
+- [AI Hero Skills Documentation](https://aihero.dev)
+- [Total TypeScript Guide](https://www.totaltypescript.com)

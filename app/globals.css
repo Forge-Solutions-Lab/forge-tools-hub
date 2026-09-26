@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-primary: #09090b;
+  --bg-secondary: #09090b;
+  --bg-surface: #111114;
+  --bg-surface-subtle: #16161a;
+  --bg-surface-elevated: #1c1c21;
+  --card-bg: #111114;
+
+  /* Typography */
+  --text-primary: #fafafa;
+  --text-secondary: #cbd5e1;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
+  --text-inverted: #09090b;
+
+  /* Borders */
+  --border-color: #27272a;
+  --border-subtle: #1f1f23;
+  --border-hover: #3f3f46;
+
+  /* Accent & Actions */
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-subtle: rgba(59, 130, 246, 0.12);
+  --accent-text: #60a5fa;
+
+  /* Status Colors */
+  --success-text: #34d399;
+  --success-bg: rgba(6, 78, 59, 0.3);
+  --success-border: rgba(5, 150, 105, 0.4);
+  --success-indicator: #10b981;
+
+  --warning-text: #fbbf24;
+  --warning-bg: rgba(120, 53, 15, 0.3);
+  --warning-border: rgba(217, 119, 6, 0.4);
+  --warning-indicator: #f59e0b;
+
+  --error-text: #fb7185;
+  --error-bg: rgba(76, 5, 25, 0.3);
+  --error-border: rgba(225, 29, 72, 0.4);
+
+  /* Categories & Badges */
+  --category-text: #93c5fd;
+  --category-bg: rgba(30, 41, 59, 0.6);
+  --category-border: rgba(51, 65, 85, 0.6);
+
+  --ide-text: #60a5fa;
+  --ide-bg: rgba(23, 37, 84, 0.4);
+  --ide-border: rgba(29, 78, 216, 0.4);
+
+  /* Before & After */
+  --before-bg: #141214;
+  --before-border: rgba(63, 30, 36, 0.7);
+  --before-header-border: rgba(63, 30, 36, 0.5);
+  --before-text: #94a3b8;
+  --before-badge-text: #fb7185;
+
+  --after-bg: #0e1713;
+  --after-border: rgba(20, 71, 47, 0.8);
+  --after-header-border: rgba(20, 71, 47, 0.6);
+  --after-text: #cbd5e1;
+  --after-badge-text: #34d399;
+
+  /* Code & Terminal */
+  --code-bg: #18181b;
+  --code-pre-bg: #0c0c0e;
+  --code-border: #27272a;
+  --code-header-bg: #16161a;
+  --code-text: #e2e8f0;
+
+  /* Heatmap */
+  --heatmap-0-bg: #16161a;
+  --heatmap-0-border: #27272a;
+  --heatmap-1-bg: rgba(6, 78, 59, 0.4);
+  --heatmap-1-border: rgba(5, 150, 105, 0.5);
+  --heatmap-2-bg: rgba(5, 150, 105, 0.6);
+  --heatmap-2-border: rgba(16, 185, 129, 0.6);
+  --heatmap-3-bg: #10b981;
+  --heatmap-3-border: #34d399;
+  --heatmap-4-bg: #34d399;
+  --heatmap-4-border: #6ee7b7;
+
+  /* Scrollbar */
+  --scrollbar-track: #09090b;
+  --scrollbar-thumb: #27272a;
+  --scrollbar-thumb-hover: #3f3f46;
+}
+
+[data-theme="light"],
+.light-theme {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-surface-elevated: #e2e8f0;
+  --card-bg: #ffffff;
+
+  /* Typography */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --text-inverted: #ffffff;
+
+  /* Borders */
+  --border-color: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-hover: #cbd5e1;
+
+  /* Accent & Actions */
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-subtle: rgba(37, 99, 235, 0.08);
+  --accent-text: #2563eb;
+
+  /* Status Colors */
+  --success-text: #047857;
+  --success-bg: rgba(209, 250, 229, 0.7);
+  --success-border: rgba(167, 243, 208, 0.9);
+  --success-indicator: #059669;
+
+  --warning-text: #b45309;
+  --warning-bg: rgba(254, 243, 199, 0.7);
+  --warning-border: rgba(253, 230, 138, 0.9);
+  --warning-indicator: #d97706;
+
+  --error-text: #e11d48;
+  --error-bg: rgba(255, 228, 230, 0.7);
+  --error-border: rgba(254, 205, 211, 0.9);
+
+  /* Categories & Badges */
+  --category-text: #1d4ed8;
+  --category-bg: rgba(219, 234, 254, 0.7);
+  --category-border: rgba(191, 219, 254, 0.9);
+
+  --ide-text: #0369a1;
+  --ide-bg: rgba(224, 242, 254, 0.7);
+  --ide-border: rgba(186, 230, 253, 0.9);
+
+  /* Before & After */
+  --before-bg: #fff1f2;
+  --before-border: rgba(254, 205, 211, 0.9);
+  --before-header-border: rgba(254, 205, 211, 0.7);
+  --before-text: #475569;
+  --before-badge-text: #e11d48;
+
+  --after-bg: #f0fdf4;
+  --after-border: rgba(187, 247, 208, 0.9);
+  --after-header-border: rgba(187, 247, 208, 0.7);
+  --after-text: #334155;
+  --after-badge-text: #059669;
+
+  /* Code & Terminal */
+  --code-bg: #f1f5f9;
+  --code-pre-bg: #0f172a;
+  --code-border: #e2e8f0;
+  --code-header-bg: #1e293b;
+  --code-text: #f8fafc;
+
+  /* Heatmap */
+  --heatmap-0-bg: #e2e8f0;
+  --heatmap-0-border: #cbd5e1;
+  --heatmap-1-bg: #a7f3d0;
+  --heatmap-1-border: #6ee7b7;
+  --heatmap-2-bg: #34d399;
+  --heatmap-2-border: #10b981;
+  --heatmap-3-bg: #059669;
+  --heatmap-3-border: #047857;
+  --heatmap-4-bg: #065f46;
+  --heatmap-4-border: #064e3b;
+
+  /* Scrollbar */
+  --scrollbar-track: #f8fafc;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Global smooth transition for theme switching */
+body,
+aside,
+header,
+main,
+div,
+nav,
+section,
+input,
+select,
+button,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom hairline scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+pre code {
+  font-family: var(--font-mono), monospace;
+}

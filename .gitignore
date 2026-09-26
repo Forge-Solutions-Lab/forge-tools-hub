@@ -1,0 +1,43 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc & OS
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# local env files (Contains sensitive tokens like GITHUB_TOKEN)
+.env*.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+
+# large external / local docs (excludes 570MB of heavy PDFs/CSVs from other projects)
+skills-agent/docs/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

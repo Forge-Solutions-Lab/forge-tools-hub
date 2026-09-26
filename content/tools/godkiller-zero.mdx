@@ -1,0 +1,61 @@
+---
+title: "GODKiller Zero MCP"
+description: "Beta proof-kernel MCP server สำหรับ AI Agent พร้อม Write-Guard, Gate validation, Memory และ Verification Engine"
+category: "MCP Server"
+tags: ["MCP", "Proof-Kernel", "Security", "AI Guard", "Memory", "Verification"]
+works_with: ["Antigravity", "Cursor", "Claude Desktop", "VSCode"]
+install_difficulty: "easy"
+source_url: "https://github.com/taurus42119-stack/godkiller-mcp"
+github_url: "https://github.com/taurus42119-stack/godkiller-mcp"
+added_by: "thananon"
+added_date: "2026-09-25"
+status: "recommended"
+featured: true
+read_time: "4 min read"
+---
+
+## มันคืออะไร?
+**GODKiller Zero MCP** คือ Local Proof-Kernel และ Model Context Protocol (MCP) server ระดับสูงที่พัฒนาขึ้นเพื่อควบคุมการตัดสินใจ การประเมินหลักฐาน และความปลอดภัยในการรันโค้ดของ AI Agent ให้ทำงานบนพื้นฐานของไฟล์จริงบนดิสก์ (`Disk > Chat`) โดยไม่สมมุติข้อมูลเอง
+
+## ใช้ทำอะไรได้บ้าง?
+- **Task & Phase Enforcement:** กำกับดูแลการทำงานตาม Phase อย่างเคร่งครัด พร้อมตรวจสอบ Phase Boundary ก่อนข้ามขั้นตอน
+- **Write-Guard Safety:** ตรวจสอบความปลอดภัยในการแก้ไขไฟล์ ป้องกันการทำลายโค้ดหรือการเขียนไฟล์ที่ไม่ปลอดภัย
+- **Automated Verification:** ตรวจสอบความถูกต้องของแผนงาน โค้ด และการทำงานผ่าน `gk_verify` และ `gk_evidence`
+- **Context & Memory Persistence:** บันทึก Memory และ State แบบ Local โดยรักษาความเป็นส่วนตัว 100%
+
+<BeforeAfter>
+  <Before>
+    AI Agent มักคิดไปเอง (Hallucinate), ละเลยขั้นตอนการวางแผน, ข้าม Phase การตรวจสอบ และเขียนโค้ดทับไฟล์โดยไม่มี Guardrail
+  </Before>
+  <After>
+    มี Gate ควบคุมอย่างเข้มงวด ตรวจสอบหลักฐานบนดิสก์จริงก่อนให้คำตอบ พร้อม Write-Guard ป้องกันข้อผิดพลาดแบบ Realtime
+  </After>
+</BeforeAfter>
+
+## เหมาะกับใคร?
+- วิศวกรที่ต้องการให้ AI Pair Programmer ทำงานได้อย่างมีระเบียบวินัยตามกรอบวิศวกรรม
+- ทีมที่ต้องการความปลอดภัยระดับสูงและไม่ต้องการให้ข้อมูลรั่วไหลออกนอกเครื่อง
+
+<QuickInstall
+  title="Claude & Antigravity MCP Config"
+  type="json"
+  config={`{
+  "mcpServers": {
+    "godkiller": {
+      "command": "python",
+      "args": ["-m", "godkiller_mcp"]
+    }
+  }
+}`}
+/>
+
+## เครื่องมือสำคัญที่มีในตัว (Facade Actions)
+- `gk_meta`: ตรวจสอบสถานะความพร้อมของเครื่องมือ และความถูกต้องของแผนงาน
+- `gk_guard`: กำกับความปลอดภัยในการอ่าน-เขียนไฟล์
+- `gk_verify`: ยืนยันผลการทำงานและข้อเท็จจริงตามเกณฑ์มาตรฐาน
+- `gk_task` / `gk_phase`: จัดการสถานะขั้นตอนการทำงาน
+
+## ลิงก์ที่ควรอ่านต่อ
+- [GODKiller Zero GitHub Repository](https://github.com/taurus42119-stack/godkiller-mcp)
+- [Model Context Protocol (MCP) Official](https://modelcontextprotocol.io)
+- [Antigravity Guide Skill](file:///Users/phongdanaisomphan/.gemini/antigravity-ide/builtin/skills/antigravity_guide/SKILL.md)

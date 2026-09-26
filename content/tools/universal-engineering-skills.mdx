@@ -1,0 +1,48 @@
+---
+title: "Forge Universal Engineering Skills"
+description: "ชุดคำสั่งมาตรฐานสำหรับทีม Forge: Handoff ข้าม Session, Code Review 2 แกน, และ Bug Bisection"
+category: "AI Skills / Prompt"
+tags: ["Engineering", "Handoff", "Code Review", "Best Practices", "Forge Standard"]
+works_with: ["Antigravity", "Cursor", "Claude", "VSCode"]
+install_difficulty: "easy"
+source_url: "https://forge-solutions-lab.github.io"
+github_url: "https://github.com/Forge-Solutions-Lab/Forge-Solutions-Lab.github.io"
+added_by: "forge-core"
+added_date: "2026-09-25"
+status: "recommended"
+featured: true
+read_time: "4 min read"
+---
+
+## มันคืออะไร?
+ชุดมาตรฐาน **Universal Engineering Workflows** สำหรับทีม Forge Solutions Lab ที่รวบรวมเทคนิคสำคัญ 3 ประการ:
+1. **Context Handoff:** การสรุป State และหลักฐานลงดิสก์เมื่อสลับ Session เพื่อป้องกัน Context Drift
+2. **Two-Axis Code Review:** ตรวจโค้ดเทียบกับความต้องการ (Spec Match) และมาตรฐานความสะอาดของโค้ด (Clean Code)
+3. **Reproducible Bug Bisection:** การตีกรอบและจำลองเงื่อนไขที่ทำให้เกิดบั๊กก่อนลงมือแก้ไข
+
+## ใช้ทำอะไรได้บ้าง?
+- ส่งต่องานระหว่าง AI Session หรือระหว่างทีมอย่างราบรื่น
+- ตรวจทาน Pull Request ได้รวดเร็วและแม่นยำยิ่งขึ้น
+- ป้องกันปัญหาบั๊กหลุดไปถึง Production
+
+<BeforeAfter>
+  <Before>
+    เวลาปิด Terminal หรือเปิด Session ใหม่ AI ลืมบริบทเดิมทั้งหมด ทำให้ต้องเริ่มต้นอธิบายโปรเจกต์ใหม่ตั้งแต่ศูนย์
+  </Before>
+  <After>
+    ใช้คำสั่ง `/handoff` เพื่อบันทึกความคืบหน้าและประเด็นที่ค้างอยู่ลงไฟล์ Markdown เปิด Session ใหม่แล้วต่อยอดได้ทันที
+  </After>
+</BeforeAfter>
+
+## เหมาะกับใคร?
+- นักพัฒนาทุกคนในทีม Forge Solutions Lab
+- งานที่ต้องทำงานข้ามวันหรือทำงานร่วมกันหลายคน
+
+<QuickInstall
+  title="Trigger Handoff Protocol"
+  type="cli"
+  command="/handoff"
+/>
+
+## ลิงก์ที่ควรอ่านต่อ
+- [Forge AI Engineering Guidelines](https://github.com/Forge-Solutions-Lab)

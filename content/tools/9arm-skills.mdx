@@ -1,0 +1,49 @@
+---
+title: "9arm-skills Workflow"
+description: "เทคนิคการ Prompt และ Meta-instructions ฉบับเข้มข้นสำหรับนักพัฒนาไทย เน้นผลลัพธ์ที่ตรงประเด็นและลดขั้นตอนเยิ่นเย้อ"
+category: "AI Skills / Prompt"
+tags: ["Prompting", "Workflow", "Developer Guide", "Claude", "Cursor"]
+works_with: ["Cursor", "Claude", "Windsurf", "ChatGPT"]
+install_difficulty: "easy"
+source_url: "https://github.com/thananon/9arm-skills"
+github_url: "https://github.com/thananon/9arm-skills"
+added_by: "thananon"
+added_date: "2026-09-24"
+status: "recommended"
+featured: false
+read_time: "3 min read"
+---
+
+## มันคืออะไร?
+ชุด Prompt Template และ Best Practices สำหรับ AI Pair Programming ที่ผ่านการทดสอบจริงในสภาพแวดล้อมการทำงานของทีม ช่วยลดอาการพูดเยอะแต่น้ำ และสั่งการให้ AI สร้าง Output ที่กระชับ ตรงตาม Functional Requirements ทันที
+
+## ใช้ทำอะไรได้บ้าง?
+- **Concise Instruction Enforcement:** สั่งการให้ AI ไม่ร่ายยาว ตอบเฉพาะประเด็นทางเทคนิคที่จำเป็น
+- **Context-First Prompting:** จัดวาง Context ของ Framework และ Database ให้ AI ทราบก่อนรับคำสั่ง
+- **Refactor without Breaking:** แนวทางการสั่ง Refactor โค้ดโดยรักษาระบบเดิมไว้ไม่ให้กระทบ Core Logic
+
+<BeforeAfter>
+  <Before>
+    AI ตอบคำอธิบายยาว 5 ย่อหน้าก่อนจะให้โค้ดจริง 3 บรรทัด และมักเปลี่ยนตัวแปรที่ไม่เกี่ยวข้อง
+  </Before>
+  <After>
+    AI ให้โค้ดและคำอธิบายจุดสำคัญสั้นๆ ชัดเจน รักษา Structure เดิมของโปรเจกต์ 100%
+  </After>
+</BeforeAfter>
+
+## เหมาะกับใคร?
+- นักพัฒนาที่ต้องการความรวดเร็วในการเขียนโค้ดและไม่อยากเสียเวลาอ่านคำตอบฟุ่มเฟือย
+- ผู้เริ่มต้นใช้งาน Cursor และ Claude Code
+
+<QuickInstall
+  title="Cursor Rules Snippet (.cursorrules)"
+  type="cli"
+  command={`# .cursorrules
+You are a senior engineer. Give concise answers.
+Maintain documentation integrity.
+Always prioritize working code and minimal diffs.`}
+/>
+
+## ลิงก์ที่ควรอ่านต่อ
+- [9arm-skills GitHub Repository](https://github.com/thananon/9arm-skills)
+- [Cursor Documentation](https://docs.cursor.com)

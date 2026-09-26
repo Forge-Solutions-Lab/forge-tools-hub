@@ -1,0 +1,45 @@
+---
+title: "Claude Code Plugins & Marketplaces"
+description: "ระบบขยายความสามารถ Claude CLI ด้วย Plugin Architecture และ Single-Plugin Marketplaces"
+category: "Workflow / Automation"
+tags: ["Claude Code", "CLI", "Plugins", "Marketplace", "Automation"]
+works_with: ["Claude Code", "Terminal"]
+install_difficulty: "medium"
+source_url: "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview"
+github_url: "https://github.com/anthropics/claude-code"
+added_by: "phongdanai"
+added_date: "2026-09-23"
+status: "recommended"
+featured: false
+read_time: "4 min read"
+---
+
+## มันคืออะไร?
+การติดตั้งและเชื่อมต่อชุดเครื่องมือ AI เข้ากับ **Claude Code CLI** ผ่านโครงสร้างมาตรฐาน `.claude-plugin/plugin.json` และ `marketplace.json` ช่วยให้คำสั่งเฉพาะทางทำงานเสมือนเป็นคำสั่งในตัวของ Claude
+
+## ใช้ทำอะไรได้บ้าง?
+- **Plugin Manifests:** กำหนดชุด Skills และ Hooks ที่ Claude จะโหลดขึ้นมาทำงานโดยอัตโนมัติ
+- **Strict Schema Validation:** ตรวจสอบความถูกต้องของ Manifests ก่อน Deploy ด้วย `claude plugin validate`
+- **Zero-Friction Sharing:** แชร์ชุดเครื่องมือระหว่างเพื่อนร่วมทีมเพียงแค่ clone repo
+
+<BeforeAfter>
+  <Before>
+    ต้องคอยก๊อปปี้ไฟล์ prompt หรือตั้งค่าทีละเครื่องอย่างยุ่งยาก เสี่ยงต่อการตั้งค่าตกหล่น
+  </Before>
+  <After>
+    ประกาศผ่าน Manifest กลางครั้งเดียว ทุกคนในทีมสามารถเรียกใช้งานเครื่องมือล่าสุดได้ทันที
+  </After>
+</BeforeAfter>
+
+## เหมาะกับใคร?
+- ทีมที่ใช้ Claude Code เป็นเครื่องมือหลักใน Terminal
+- DevOps & Platform Engineers ที่ต้องการวางมาตรฐาน Tooling ให้ทั้งองค์กร
+
+<QuickInstall
+  title="Validate & Install Plugin"
+  type="cli"
+  command="claude plugin validate . --strict"
+/>
+
+## ลิงก์ที่ควรอ่านต่อ
+- [Anthropic Claude Code Overview](https://docs.anthropic.com)
