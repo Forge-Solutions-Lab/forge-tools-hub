@@ -178,22 +178,3 @@ cp docs/standards/01-CODE_STYLE.md .cursorrules
 cp docs/standards/01-CODE_STYLE.md CLAUDE.md
 ```
 
----
-
-## หลักการออกแบบ UI/UX ที่นำมาประยุกต์ใช้ (Design Heuristics & Citations)
-
-การ์ดและหน้าเอกสารนี้ได้รับการปรับปรุงตามมาตรฐานวิศวกรรม UI/UX สากล:
-
-1. **Refactoring UI Principles (Steve Schoger & Adam Wathan):**
-   - *Eliminate Decorative Emoji Clutter:* หลีกเลี่ยงการใช้อิโมจิที่ไม่จำเป็นซึ่งลดทอนความเป็นมืออาชีพของเครื่องมือวิศวกรรม และแทนที่ด้วยความชัดเจนของ Typographic Hierarchy (น้ำหนักฟอนต์, ขนาด, และคอนทราสต์)
-   - *Functional Iconography:* ใช้ไอคอน SVG จาก Lucide ที่มีความหมายเฉพาะเจาะจงกับฟังก์ชัน (เช่น `Download`, `Copy`, `FileCode`, `ShieldCheck`)
-   - *Visual Weight & Action Hierarchy:* ปุ่มดาวน์โหลดหลัก (Primary Action) มีคอนทราสต์ชัดเจน ส่วนปุ่มดาวน์โหลดไฟล์ย่อย (Secondary Action) ใช้ Ghost/Bordered Style ที่สะอาดตา
-
-2. **Linear & Vercel Design Language:**
-   - ใช้ชุดสีพื้นผิว Dark-mode แบบมีมิติ (`bg-surface-subtle`, `border-color`, `hover:border-hover`)
-   - แสดงสถานะไฟล์ด้วย Monospace Metadata Chips (`RULE #01`, `4.2 KB`, `Architecture & Standards`)
-   - เพิ่มระบบ Expandable Code Drawer ให้ผู้ใช้ดูเนื้อหาโค้ดภายในหน้าได้ทันทีโดยไม่ต้องเปลี่ยนหน้า
-
-3. **Nielsen Norman Group (NN/g) Usability Heuristics:**
-   - *Direct Action Trigger:* ปุ่ม Download สั่ง Trigger Native Browser Blob Download ลงในเครื่องของผู้ใช้โดยตรง ไม่เปิดหน้าต่างเปล่าหรือบังคับให้ผู้ใช้ Copy มือ
-   - *System Status & Immediate Feedback:* มีสถานะแจ้งเตือน *"Downloading..."* และ *"Copied"* แบบเรียลไทม์เมื่อผู้ใช้กดใช้งาน
