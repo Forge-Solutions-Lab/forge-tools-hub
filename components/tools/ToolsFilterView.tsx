@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Search, X, Layers } from "lucide-react";
 import { type ToolItem } from "@/lib/schema";
@@ -20,14 +20,24 @@ export const ToolsFilterView: React.FC<ToolsFilterViewProps> = ({
   allWorksWith,
 }) => {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "All";
-  const initialSearch = searchParams.get("search") || "";
+  const categoryParam = searchParams.get("category") || "All";
+  const searchParam = searchParams.get("search") || "";
 
-  const [search, setSearch] = useState(initialSearch);
-  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
+  const [search, setSearch] = useState(searchParam);
+  const [selectedCategory, setSelectedCategory] = useState<string>(categoryParam);
   const [selectedIde, setSelectedIde] = useState<string>("All");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("All");
   const [selectedStatus, setSelectedStatus] = useState<string>("All");
+
+  // Sync state when URL search parameters change (e.g. from top bar search)
+  useEffect(() => {
+    if (searchParam !== undefined) {
+      setSearch(searchParam);
+    }
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParam, categoryParam]);
 
   const filteredTools = useMemo(() => {
     return initialTools.filter((tool) => {
