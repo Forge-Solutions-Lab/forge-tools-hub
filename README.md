@@ -2,6 +2,9 @@
 
 ระบบศูนย์กลางรวบรวมเครื่องมือ AI, ชุดคำสั่ง Prompt, และมาตรฐานวิศวกรรมซอฟต์แวร์ สำหรับทีม **Forge Solutions Lab**
 
+- **เว็บไซต์หลัก (Live Website):** [https://forge-tools-hub-zeta.vercel.app](https://forge-tools-hub-zeta.vercel.app)
+- **หน้ารายชื่อสมาชิกทีมและกิจกรรม (Contributors):** [https://forge-tools-hub-zeta.vercel.app/contributors](https://forge-tools-hub-zeta.vercel.app/contributors)
+
 ---
 
 ## ภาพรวมโปรเจกต์
