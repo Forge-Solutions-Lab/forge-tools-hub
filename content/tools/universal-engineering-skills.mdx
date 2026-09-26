@@ -1,48 +1,162 @@
 ---
 title: "Forge Universal Engineering Skills"
-description: "ชุดคำสั่งมาตรฐานสำหรับทีม Forge: Handoff ข้าม Session, Code Review 2 แกน, และ Bug Bisection"
+description: "ชุดมาตรฐานทางวิศวกรรมสากล: Code Style, 2-Axis Code Review, Docker Automation, Context Handoff, ADR และ PRD Templates สำหรับทุกโปรเจกต์"
 category: "AI Skills / Prompt"
-tags: ["Engineering", "Handoff", "Code Review", "Best Practices", "Forge Standard"]
-works_with: ["Antigravity", "Cursor", "Claude", "VSCode"]
+tags: ["Engineering", "Clean Code", "Code Review", "Docker", "Handoff", "ADR", "PRD", "Forge Standard"]
+works_with: ["Antigravity", "Cursor", "Claude Code", "Windsurf", "VSCode"]
 install_difficulty: "easy"
-source_url: "https://forge-solutions-lab.github.io"
-github_url: "https://github.com/Forge-Solutions-Lab/Forge-Solutions-Lab.github.io"
-added_by: "forge-core"
-added_date: "2026-09-25"
+source_url: "https://github.com/Forge-Solutions-Lab/forge-tools-hub"
+github_url: "https://github.com/Forge-Solutions-Lab/forge-tools-hub.git"
+added_by: "phongdanai"
+added_date: "2026-09-26"
 status: "recommended"
 featured: true
-read_time: "4 min read"
+read_time: "8 min read"
 ---
 
-## มันคืออะไร?
-ชุดมาตรฐาน **Universal Engineering Workflows** สำหรับทีม Forge Solutions Lab ที่รวบรวมเทคนิคสำคัญ 3 ประการ:
-1. **Context Handoff:** การสรุป State และหลักฐานลงดิสก์เมื่อสลับ Session เพื่อป้องกัน Context Drift
-2. **Two-Axis Code Review:** ตรวจโค้ดเทียบกับความต้องการ (Spec Match) และมาตรฐานความสะอาดของโค้ด (Clean Code)
-3. **Reproducible Bug Bisection:** การตีกรอบและจำลองเงื่อนไขที่ทำให้เกิดบั๊กก่อนลงมือแก้ไข
+## 📦 ดาวน์โหลดชุดทักษะทั้งหมด (Download ZIP Bundles)
 
-## ใช้ทำอะไรได้บ้าง?
-- ส่งต่องานระหว่าง AI Session หรือระหว่างทีมอย่างราบรื่น
-- ตรวจทาน Pull Request ได้รวดเร็วและแม่นยำยิ่งขึ้น
-- ป้องกันปัญหาบั๊กหลุดไปถึง Production
+คลังมาตรฐานและแม่แบบ (Templates) นี้ได้รับการคัดเกรด ขัดเกลา และปรับแต่งให้เป็น **Universal Standard** ที่พร้อมนำไปใช้งานได้กับทุกโปรเจกต์ของ Forge Solutions Lab (ทั้ง Web Apps, Data Pipelines, AI Agents และ Machine Learning Services):
+
+<QuickInstall
+  title="Download Complete Engineering Skills Bundle (.ZIP)"
+  type="download"
+  command="ดาวน์โหลดชุด Universal Skills ครบทั้ง 7 หมวดหมู่ (Clean Markdown + Templates)"
+/>
+
+<div className="flex flex-wrap items-center gap-3 my-4">
+  <a
+    href="/downloads/forge-universal-engineering-skills.zip"
+    download
+    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white font-mono text-xs font-semibold shadow-md transition-all"
+  >
+    <span>📥 Download Universal Skills Bundle (.ZIP)</span>
+  </a>
+
+  <a
+    href="/downloads/skills-agent-full.zip"
+    download
+    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--bg-surface-subtle)] hover:bg-[var(--bg-surface-elevated)] text-[var(--text-primary)] font-mono text-xs border border-[var(--border-color)] transition-all"
+  >
+    <span>📦 Download Full Raw Repository Bundle (.ZIP)</span>
+  </a>
+</div>
+
+---
+
+## 🎯 ทำไมต้องมี Universal Engineering Skills?
+
+ในการทำงานร่วมกันระหว่างทีมวิศวกรและ AI Coding Assistant (เช่น Antigravity, Cursor, Claude Code) หากไม่มีมาตรฐานกลางที่ชัดเจน จะเกิดปัญหา:
+- **AI เขียนโค้ดตามใจชอบ:** ขาด Layered Architecture, เขียนโค้ดซ้ำซ้อน, ใส่ `print()` เกลื่อนโปรเจกต์
+- **Context Drift:** เมื่อเปิด Session ใหม่ AI ลืมบริบทเดิมทั้งหมด ทำให้ต้องเริ่มอธิบายใหม่
+- **Docker พังเงียบ:** สั่งรันคำสั่งลบ Volume ฐานข้อมูล หรือไม่ตรวจสอบ Health Check ก่อนส่งงาน
 
 <BeforeAfter>
   <Before>
-    เวลาปิด Terminal หรือเปิด Session ใหม่ AI ลืมบริบทเดิมทั้งหมด ทำให้ต้องเริ่มต้นอธิบายโปรเจกต์ใหม่ตั้งแต่ศูนย์
+    AI เขียนโค้ดปนเปื้อน Controller มี Raw SQL ผสม Business Logic, สั่ง Rebuild Docker แบบลบฐานข้อมูลทิ้ง, และเมื่อสลับ Session ต้องพิมพ์อธิบายโปรเจกต์ใหม่ตั้งแต่ต้น
   </Before>
   <After>
-    ใช้คำสั่ง `/handoff` เพื่อบันทึกความคืบหน้าและประเด็นที่ค้างอยู่ลงไฟล์ Markdown เปิด Session ใหม่แล้วต่อยอดได้ทันที
+    AI และทีมปฏิบัติตามมาตรฐาน 7 หมวดหมู่ มี Code Style เคร่งครัด, มี 2-Axis Code Review ป้องกันบั๊ก, ใช้ Docker Auto-Change Detection ปลอดภัย 100%, และส่งต่องานด้วย Handoff Protocol
   </After>
 </BeforeAfter>
 
-## เหมาะกับใคร?
-- นักพัฒนาทุกคนในทีม Forge Solutions Lab
-- งานที่ต้องทำงานข้ามวันหรือทำงานร่วมกันหลายคน
+---
 
-<QuickInstall
-  title="Trigger Handoff Protocol"
-  type="cli"
-  command="/handoff"
-/>
+## 📑 สรุป 7 หมวดหมู่มาตรฐานและไฟล์สำหรับดาวน์โหลด
 
-## ลิงก์ที่ควรอ่านต่อ
-- [Forge AI Engineering Guidelines](https://github.com/Forge-Solutions-Lab)
+---
+
+### 1. 📐 Code Style & Clean Architecture Standard
+- **ไฟล์:** [`01-CODE_STYLE.md`](/downloads/universal-skills/01-CODE_STYLE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/01-CODE_STYLE.md)
+- **วัตถุประสงค์:** กำหนด "Engineering DNA" สากลที่ไม่ขึ้นกับภาษาโปรแกรม
+- **หัวใจสำคัญ:**
+  1. **Readability First:** โค้ดถูกเขียนเพื่อให้อ่านง่ายสำหรับมนุษย์ก่อนเสมอ
+  2. **Single Responsibility:** ฟังก์ชันและคลาสต้องมีเหตุผลเดียวในการเปลี่ยนแปลง
+  3. **Error Handling & Observability:** ห้ามกลืน Error (`except: pass`), ใช้ Structured Logging แทน `print()`, และลบ Debug Artifacts ออกก่อน Commit
+  4. **Security & State:** ห้าม Hardcode Secrets, ป้องกัน SQL Injection ด้วย Parameterized Query, และรักษา Unidirectional Data Flow
+
+---
+
+### 2. 🔍 2-Axis AI Code Review Workflow
+- **ไฟล์:** [`02-AI_CODE_REVIEW_WORKFLOW.md`](/downloads/universal-skills/02-AI_CODE_REVIEW_WORKFLOW.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/02-AI_CODE_REVIEW_WORKFLOW.md)
+- **วัตถุประสงค์:** มาตรฐานการตรวจทาน Pull Request ทั้งสำหรับคนและ AI Reviewer
+- **หัวใจสำคัญ:**
+  1. **Two-Axis Paradigm:** ตรวจทั้ง **ความถูกต้องตามสเปก (Spec Match)** และ **ความสะอาดของสถาปัตยกรรม (Clean Code)**
+  2. **Checklists แยก Backend / Frontend:** ตรวจสอบ Layered Separation, State Management, และ Accessibility
+  3. **Severity Classification:** แบ่งระดับความรุนแรงชัดเจน (Critical ➔ High ➔ Medium ➔ Low) เพื่อบล็อกการ Merge ในจุดที่เสี่ยงต่อความปลอดภัย
+
+---
+
+### 3. 🐳 Docker Workflow & Deployment Rules
+- **ไฟล์:** [`03-DOCKER_WORKFLOW_RULES.md`](/downloads/universal-skills/03-DOCKER_WORKFLOW_RULES.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/03-DOCKER_WORKFLOW_RULES.md)
+- **วัตถุประสงค์:** กฎการรัน Docker และ Container Automation สำหรับ AI Agents
+- **หัวใจสำคัญ:**
+  1. **Automated Change Detection:** สแกน `git status` เพื่อเลือกคำสั่ง Build/Up ที่เหมาะสมที่สุดโดยอัตโนมัติ (Category A: Code, B: Env, C: Single Service)
+  2. **Persistent Storage Protection:** ห้ามใช้ Flag ลบ Volume (`-v`) โดยไม่ได้รับอนุญาต รักษาข้อมูล Database และ Redis เสมอ
+  3. **Post-deploy Health Verification:** ตรวจสอบ HTTP 200 บน Health Check Endpoints ทุกครั้งหลัง Deploy
+
+---
+
+### 4. 📑 Zero-Drift Context Handoff Protocol
+- **ไฟล์:** [`04-HANDOFF_PROTOCOL.md`](/downloads/universal-skills/04-HANDOFF_PROTOCOL.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/04-HANDOFF_PROTOCOL.md)
+- **วัตถุประสงค์:** แม่แบบสรุปสถานะโปรเจกต์ก่อนปิด Session หรือส่งต่องาน
+- **หัวใจสำคัญ:**
+  1. **System Map:** บันทึกโครงสร้างไดเรกทอรีและหน้าที่ของแต่ละส่วน
+  2. **Changelog & Milestones:** บันทึกสิ่งที่ทำเสร็จแล้วในรอบนี้พร้อมระบุ Scope
+  3. **Actionable Next Steps:** ระบุงานที่ต้องทำต่อทันทีตามลำดับความสำคัญ (Priority 1, 2, 3)
+
+---
+
+### 5. 🏛️ Architecture Decision Records (ADR Standard)
+- **ไฟล์:** [`05-ADR_GUIDELINES_AND_TEMPLATE.md`](/downloads/universal-skills/05-ADR_GUIDELINES_AND_TEMPLATE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/05-ADR_GUIDELINES_AND_TEMPLATE.md)
+- **วัตถุประสงค์:** แม่แบบบันทึกการตัดสินใจทางสถาปัตยกรรม (Architecture Decisions)
+- **หัวใจสำคัญ:**
+  1. **Context & Problem Statement:** ทำไมถึงต้องตัดสินใจในเรื่องนี้
+  2. **Options Considered:** เปรียบเทียบทางเลือกพร้อม Pros / Cons
+  3. **Consequences & Trade-offs:** บันทึกผลกระทบเชิงบวกและข้อจำกัดที่ยอมรับได้
+
+---
+
+### 6. 📄 Product Requirements Document (PRD & Spec Standard)
+- **ไฟล์:** [`06-PRD_AND_SPEC_TEMPLATE.md`](/downloads/universal-skills/06-PRD_AND_SPEC_TEMPLATE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/06-PRD_AND_SPEC_TEMPLATE.md)
+- **วัตถุประสงค์:** แม่แบบการเขียน Requirement และ Technical Specification สำหรับฟีเจอร์ใหม่
+- **หัวใจสำคัญ:**
+  1. **User Stories:** ทำความเข้าใจผู้ใช้และเป้าหมายที่แท้จริง
+  2. **Technical Schema & Endpoints:** ออกแบบ Data Model และ API Contract ล่วงหน้า
+  3. **Acceptance Criteria:** กำหนด Checklists การตรวจรับงานที่วัดผลได้จริง
+
+---
+
+### 7. 🤖 AI Agentic Operating Rules & Guardrails
+- **ไฟล์:** [`07-AGENTS_WORKFLOW_RULES.md`](/downloads/universal-skills/07-AGENTS_WORKFLOW_RULES.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/07-AGENTS_WORKFLOW_RULES.md)
+- **วัตถุประสงค์:** กรอบและข้อบังคับสำหรับ AI Coding Assistants
+- **หัวใจสำคัญ:**
+  1. **Inspect Before Edit:** ต้องอ่านโค้ดจริงและประเมินผลกระทบ (Blast Radius) ก่อนแก้ไขเสมอ
+  2. **Non-destructive Terminal Ops:** ห้ามรันคำสั่งทำลายข้อมูลหรือ Force Push บน Branch หลัก
+  3. **Verification Loop:** ต้องรัน Build / Test ยืนยันผลลัพธ์ก่อนส่งมอบงานให้วิศวกร
+
+---
+
+## 🚀 วิธีนำไปติดตั้งในโปรเจกต์ใหม่ (Quick Integration)
+
+### วิธีที่ 1: แปะไฟล์มาตรฐานลงในโฟลเดอร์ `docs/`
+ดาวน์โหลดไฟล์ `.zip` จากปุ่มด้านบน แล้วแตกไฟล์ไว้ในโปรเจกต์ของคุณ:
+```bash
+# 1. แตกไฟล์ลงในโฟลเดอร์ docs
+mkdir -p docs/standards
+unzip forge-universal-engineering-skills.zip -d docs/standards/
+
+# 2. นำไฟล์ 01-CODE_STYLE.md ไปตั้งเป็น Rule หรือ Instruction ของ AI
+cp docs/standards/01-CODE_STYLE.md .cursorrules # สำหรับ Cursor
+cp docs/standards/01-CODE_STYLE.md CLAUDE.md    # สำหรับ Claude Code
+```
+
+### วิธีที่ 2: รันผ่าน Script ของแล็บ
+```bash
+./skills-agent/skills-main/scripts/link-skills.sh
+```
+
+---
+
+## 🏛️ Forge Solutions Lab
+ออกแบบและดูแลโดยทีมวิศวกร [Forge Solutions Lab](https://github.com/Forge-Solutions-Lab) — ยึดถือความเรียบง่าย ประสิทธิภาพ และมาตรฐานวิศวกรรมระดับสากล
