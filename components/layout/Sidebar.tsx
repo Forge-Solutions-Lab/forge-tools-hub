@@ -6,8 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   Wrench,
-  Sparkles,
-  Server,
   Users,
   PlusCircle,
   Github,
@@ -23,19 +21,9 @@ const NAV_ITEMS = [
     icon: LayoutDashboard,
   },
   {
-    name: "All Tools & Skills",
+    name: "Tools & Skills Catalog",
     href: "/tools",
     icon: Wrench,
-  },
-  {
-    name: "MCP Servers",
-    href: "/tools?category=MCP+Server",
-    icon: Server,
-  },
-  {
-    name: "AI Skills & Prompts",
-    href: "/tools?category=AI+Skills+%2F+Prompt",
-    icon: Sparkles,
   },
   {
     name: "Contributors",
