@@ -1,4 +1,4 @@
-# 🤖 Universal AI Agent Workflow & Operating Rules (Forge Standard)
+# Universal AI Agent Workflow & Operating Rules (Forge Standard)
 
 > กฎและกรอบการทำงานสำหรับ AI Coding Assistant (Antigravity, Cursor, Claude Code, Cline)
 > กำหนดพฤติกรรมความปลอดภัย การวิเคราะห์ก่อนลงมือ และการส่งมอบงานอย่างมีคุณภาพ

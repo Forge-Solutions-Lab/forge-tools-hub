@@ -3,6 +3,8 @@ import Link from "next/link";
 import { BeforeAfter, Before, After } from "./BeforeAfterBlock";
 import { QuickInstall } from "./QuickInstall";
 import { TagBadge } from "./TagBadge";
+import { SkillDownloadCard } from "./SkillDownloadCard";
+import { BundleDownloadHero } from "./BundleDownloadHero";
 import { ExternalLink } from "lucide-react";
 
 export const MDXCustomComponents = {
@@ -11,6 +13,8 @@ export const MDXCustomComponents = {
   After,
   QuickInstall,
   TagBadge,
+  SkillDownloadCard,
+  BundleDownloadHero,
   h2: ({ children, ...props }: any) => (
     <h2
       className="text-lg font-semibold text-[var(--text-primary)] tracking-tight mt-8 mb-3 pb-2 border-b border-[var(--border-color)] flex items-center gap-2"

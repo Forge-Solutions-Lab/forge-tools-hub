@@ -1,10 +1,10 @@
-# 📦 Forge Universal Engineering Skills Bundle
+# Forge Universal Engineering Skills Bundle
 
 ชุดมาตรฐานทางวิศวกรรม, แนวปฏิบัติการเขียนโค้ด, การรีวิวโค้ด, คำสั่ง Docker, กฎการทำงานของ AI Agent, และ Template การส่งต่องาน (Handoff) สำหรับทีม **Forge Solutions Lab**
 
 ---
 
-## 📑 สารบัญเอกสารภายใน Bundle:
+## สารบัญเอกสารภายใน Bundle:
 
 1. **`01-CODE_STYLE.md`** — มาตรฐานการเขียนโค้ดและ Clean Architecture สากล
 2. **`02-AI_CODE_REVIEW_WORKFLOW.md`** — กระบวนการตรวจทานโค้ด (Code Review) 2 แกนพร้อม Checklists

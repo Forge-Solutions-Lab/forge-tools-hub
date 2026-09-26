@@ -1,4 +1,4 @@
-# 🐳 Universal Docker Workflow & Deployment Rules (Forge Standard)
+# Universal Docker Workflow & Deployment Rules (Forge Standard)
 
 > มาตรฐานและกฎการรัน Docker / Docker Compose สำหรับ AI Agents และทีมพัฒนา
 > ออกแบบมาเพื่อรองรับคำสั่งสั้นๆ เช่น `"รัน docker"`, `"อัปเดตระบบ"`, หรือ `"restart container"` อย่างปลอดภัยและแม่นยำ
@@ -9,21 +9,21 @@
 
 ก่อนสั่งรันคำสั่ง Docker ทุกครั้ง ระบบหรือ AI จะต้องตรวจสอบ `git status` เพื่อเลือกคำสั่งที่เหมาะสมที่สุด:
 
-### 🔹 Category A: แก้ไข Source Code ทั่วไป
+### Category A: แก้ไข Source Code ทั่วไป
 - **Target Files:** `src/**/*`, `app/**/*`, `components/**/*`, `backend/**/*`
 - **Recommended Command:**
   ```bash
   docker compose up -d --build --force-recreate
   ```
 
-### 🔹 Category B: แก้ไข Environment & Build Args
+### Category B: แก้ไข Environment & Build Args
 - **Target Files:** `.env`, `.env.*`, `Dockerfile`, `package.json`, `requirements.txt`
 - **Recommended Command:**
   ```bash
   docker compose build --no-cache && docker compose up -d --force-recreate
   ```
 
-### 🔹 Category C: แก้ไขเฉพาะ Service เดี่ยว
+### Category C: แก้ไขเฉพาะ Service เดี่ยว
 - **Target Files:** เฉพาะโฟลเดอร์ของ Service ใด Service หนึ่ง
 - **Recommended Command:**
   ```bash

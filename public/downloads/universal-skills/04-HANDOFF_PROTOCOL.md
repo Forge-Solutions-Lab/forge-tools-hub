@@ -1,14 +1,14 @@
-# 📑 Universal Context Handoff Protocol & Template (Forge Standard)
+# Universal Context Handoff Protocol & Template (Forge Standard)
 
 > มาตรฐานการส่งต่องานข้าม Session หรือระหว่างทีม (Zero Context-Drift Protocol)
 > ใช้สำหรับสรุป State, แผนสถาปัตยกรรม, งานที่เสร็จแล้ว และงานที่ต้องทำต่อ เพื่อให้เปิด Session ถัดไปแล้วเริ่มงานต่อได้ทันที
 
 ---
 
-## 📋 Handoff Document Template (`HANDOFF.md`)
+## Handoff Document Template (`HANDOFF.md`)
 
 ```markdown
-# 📑 Project Handoff & Technical Architecture Document
+# Project Handoff & Technical Architecture Document
 **Project Name**: <ชื่อโปรเจกต์>  
 **Date**: <วันที่อัปเดต เช่น 26 กันยายน 2026>  
 **Repository**: `<Git Remote URL>` (Branch: `<active-branch>`)  
@@ -17,12 +17,12 @@
 
 ---
 
-## 🎯 1. Executive Summary
+## 1. Executive Summary
 สรุปเป้าหมายหลักของโปรเจกต์ ปัญหาที่แก้ไข และความสามารถหลักของระบบใน 2-3 ย่อหน้า
 
 ---
 
-## 🏗️ 2. System Architecture & Component Map
+## 2. System Architecture & Component Map
 ผังโครงสร้าง Directory และหน้าที่ของแต่ละโฟลเดอร์หลักในโปรเจกต์:
 
 \`\`\`text
@@ -38,14 +38,14 @@ project-root/
 
 ---
 
-## 🧩 3. Core Modules & Feature Breakdown
+## 3. Core Modules & Feature Breakdown
 สรุปสถานะการทำงานของแต่ละโมดูลหลักในระบบ:
 - **Module 1 (<ชื่อโมดูล>):** หน้าที่, ไฟล์ที่เกี่ยวข้อง, ฟังก์ชันสำคัญ
 - **Module 2 (<ชื่อโมดูล>):** หน้าที่, ไฟล์ที่เกี่ยวข้อง, ฟังก์ชันสำคัญ
 
 ---
 
-## 🛠️ 4. Build, Test & Deployment Guide
+## 4. Build, Test & Deployment Guide
 คำสั่งสำคัญที่ต้องใช้รันระบบ:
 \`\`\`bash
 # 1. ติดตั้ง Dependencies
@@ -61,7 +61,7 @@ npm run build
 
 ---
 
-## 📋 5. Recent Changelog (Session Summary)
+## 5. Recent Changelog (Session Summary)
 ประวัติการเปลี่ยนแปลงล่าสุดในรอบการทำงานนี้:
 | Timestamp | Scope | Summary of Changes |
 |---|---|---|
@@ -69,7 +69,7 @@ npm run build
 
 ---
 
-## 🚀 6. Next Steps & Pending Tasks (สิ่งที่ต้องทำต่อทันที)
+## 6. Next Steps & Pending Tasks (สิ่งที่ต้องทำต่อทันที)
 1. **[Priority 1]:** <งานที่ต้องทำเป็นลำดับถัดไป>
 2. **[Priority 2]:** <งานที่ค้างอยู่หรือฟีเจอร์ที่ต้องต่อยอด>
 ```

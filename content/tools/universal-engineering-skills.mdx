@@ -14,149 +14,186 @@ featured: true
 read_time: "8 min read"
 ---
 
-## 📦 ดาวน์โหลดชุดทักษะทั้งหมด (Download ZIP Bundles)
-
-คลังมาตรฐานและแม่แบบ (Templates) นี้ได้รับการคัดเกรด ขัดเกลา และปรับแต่งให้เป็น **Universal Standard** ที่พร้อมนำไปใช้งานได้กับทุกโปรเจกต์ของ Forge Solutions Lab (ทั้ง Web Apps, Data Pipelines, AI Agents และ Machine Learning Services):
-
-<QuickInstall
-  title="Download Complete Engineering Skills Bundle (.ZIP)"
-  type="download"
-  command="ดาวน์โหลดชุด Universal Skills ครบทั้ง 7 หมวดหมู่ (Clean Markdown + Templates)"
+<BundleDownloadHero
+  primaryZipUrl="/downloads/forge-universal-engineering-skills.zip"
+  primaryZipName="forge-universal-engineering-skills.zip"
+  primaryZipSize="12 KB"
+  fullZipUrl="/downloads/skills-agent-full.zip"
+  fullZipName="skills-agent-full.zip"
+  fullZipSize="6.8 MB"
 />
 
-<div className="flex flex-wrap items-center gap-3 my-4">
-  <a
-    href="/downloads/forge-universal-engineering-skills.zip"
-    download
-    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent-color)] hover:bg-[var(--accent-hover)] text-white font-mono text-xs font-semibold shadow-md transition-all"
-  >
-    <span>📥 Download Universal Skills Bundle (.ZIP)</span>
-  </a>
+## ทำไมต้องมี Universal Engineering Skills?
 
-  <a
-    href="/downloads/skills-agent-full.zip"
-    download
-    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--bg-surface-subtle)] hover:bg-[var(--bg-surface-elevated)] text-[var(--text-primary)] font-mono text-xs border border-[var(--border-color)] transition-all"
-  >
-    <span>📦 Download Full Raw Repository Bundle (.ZIP)</span>
-  </a>
-</div>
-
----
-
-## 🎯 ทำไมต้องมี Universal Engineering Skills?
-
-ในการทำงานร่วมกันระหว่างทีมวิศวกรและ AI Coding Assistant (เช่น Antigravity, Cursor, Claude Code) หากไม่มีมาตรฐานกลางที่ชัดเจน จะเกิดปัญหา:
-- **AI เขียนโค้ดตามใจชอบ:** ขาด Layered Architecture, เขียนโค้ดซ้ำซ้อน, ใส่ `print()` เกลื่อนโปรเจกต์
-- **Context Drift:** เมื่อเปิด Session ใหม่ AI ลืมบริบทเดิมทั้งหมด ทำให้ต้องเริ่มอธิบายใหม่
-- **Docker พังเงียบ:** สั่งรันคำสั่งลบ Volume ฐานข้อมูล หรือไม่ตรวจสอบ Health Check ก่อนส่งงาน
+ในการทำงานร่วมกันระหว่างวิศวกรและ AI Coding Assistants (เช่น Antigravity, Cursor, Claude Code) หากไม่มีมาตรฐานกลางที่ชัดเจน จะเกิดปัญหาความสับสนในระบบ:
+- **Architecture Inconsistency:** โค้ดขาด Layered Architecture, ผสม Business Logic เข้ากับ Presentation หรือ Controller
+- **Context Drift:** เมื่อเริ่ม Session ใหม่ AI ลืมบริบทและสถาปัตยกรรมเดิม ทำให้ต้องเริ่มอธิบายใหม่
+- **Unsafe Deployments:** สั่งคำสั่ง Docker ที่เสี่ยงต่อการสูญหายของ Data Volume หรือไม่มี Health Check รับรอง
 
 <BeforeAfter>
   <Before>
-    AI เขียนโค้ดปนเปื้อน Controller มี Raw SQL ผสม Business Logic, สั่ง Rebuild Docker แบบลบฐานข้อมูลทิ้ง, และเมื่อสลับ Session ต้องพิมพ์อธิบายโปรเจกต์ใหม่ตั้งแต่ต้น
+    AI เขียนโค้ดปะปนหลายหน้าที่ในไฟล์เดียว, สั่ง Rebuild Docker แบบลบฐานข้อมูลทิ้งโดยไม่รู้ตัว, และเมื่อเปลี่ยน Session ต้องพิมพ์อธิบายภาพรวมโปรเจกต์ใหม่ตั้งแต่ต้น
   </Before>
   <After>
-    AI และทีมปฏิบัติตามมาตรฐาน 7 หมวดหมู่ มี Code Style เคร่งครัด, มี 2-Axis Code Review ป้องกันบั๊ก, ใช้ Docker Auto-Change Detection ปลอดภัย 100%, และส่งต่องานด้วย Handoff Protocol
+    ทีมและ AI ปฏิบัติตามมาตรฐาน 7 Modules: มี Code Style ชัดเจน, ตรวจสอบผ่าน 2-Axis Review, ใช้ Docker Auto-Detection ปลอดภัย, และบันทึก State ด้วย Handoff Protocol
   </After>
 </BeforeAfter>
 
 ---
 
-## 📑 สรุป 7 หมวดหมู่มาตรฐานและไฟล์สำหรับดาวน์โหลด
+## สรุป 7 หมวดหมู่มาตรฐานและไฟล์สำหรับดาวน์โหลด
+
+แต่ละข้อด้านล่างสามารถกด **Download .md** เพื่อดาวน์โหลดไฟล์ลงเครื่องได้ทันที หรือกด **Copy / Preview** เพื่อนำเนื้อหาไปใช้งานได้สะดวกรวดเร็ว
+
+<SkillDownloadCard
+  id="01"
+  title="Code Style & Clean Architecture Standard"
+  category="Architecture & Standards"
+  filename="01-CODE_STYLE.md"
+  downloadUrl="/downloads/universal-skills/01-CODE_STYLE.md"
+  fileSize="4.2 KB"
+  description="กำหนดโครงสร้าง Layered Architecture (Presentation, Application, Domain, Infrastructure), Type Safety, Single Responsibility และการจัดการ Error อย่างเป็นระบบ"
+  highlights={[
+    "Layered Separation ชัดเจน ห้าม Controller เรียก Database ตรง",
+    "ห้ามกลืน Error (except: pass) และห้ามใช้ print() แทน Logger",
+    "Security First: ห้าม Hardcode Secret และใช้ Parameterized Queries",
+    "Clean Function Design: 1 ฟังก์ชันทำหน้าที่เดียวเท่านั้น"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="02"
+  title="2-Axis AI Code Review Workflow"
+  category="Code Quality & Review"
+  filename="02-AI_CODE_REVIEW_WORKFLOW.md"
+  downloadUrl="/downloads/universal-skills/02-AI_CODE_REVIEW_WORKFLOW.md"
+  fileSize="4.8 KB"
+  description="กระบวนการตรวจทาน Pull Request และโค้ดแบบ 2 แกน: ความถูกต้องตามข้อกำหนด (Spec Match) และความสะอาดของสถาปัตยกรรม (Code Cleanliness)"
+  highlights={[
+    "Spec & Architecture Checklists แยกหมวด Backend และ Frontend",
+    "Severity Classification: Critical / High / Medium / Low",
+    "เกณฑ์การประเมิน Security, Performance และ Regression Protection",
+    "มาตรฐาน Formatting Feedback ใน PR เพื่อให้ AI หรือคนแก้ไขได้ทันที"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="03"
+  title="Docker Workflow & Deployment Rules"
+  category="DevOps & Containers"
+  filename="03-DOCKER_WORKFLOW_RULES.md"
+  downloadUrl="/downloads/universal-skills/03-DOCKER_WORKFLOW_RULES.md"
+  fileSize="3.2 KB"
+  description="กฎและระบบ Automation สำหรับคำสั่ง Docker: ตรวจจับการเปลี่ยนแปลงไฟล์อัตโนมัติ (Rebuild vs Restart) และป้องกันการลบ Persistent Volume"
+  highlights={[
+    "Auto-Change Detection ตาม git status (Source Code, Env, Single Service)",
+    "Volume Protection Rule: ห้ามใช้ flag ทำลาย Persistent Volumes",
+    "Health Check Verification: ต้องตรวจ HTTP 200 หลัง Container ทำงาน",
+    "Port Conflict Resolution และ Container Hygiene มาตรฐาน"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="04"
+  title="Zero-Drift Context Handoff Protocol"
+  category="Context & Session Continuity"
+  filename="04-HANDOFF_PROTOCOL.md"
+  downloadUrl="/downloads/universal-skills/04-HANDOFF_PROTOCOL.md"
+  fileSize="3.8 KB"
+  description="โปรโตคอลและแม่แบบสรุปสถานะการทำงานข้าม Session ป้องกัน Context Drift และรักษา Roadmap ความคืบหน้าของโปรเจกต์"
+  highlights={[
+    "Session Snapshot: สรุปงานที่ทำเสร็จในรอบปัจจุบันอย่างละเอียด",
+    "System Map & Directory Index สำหรับอ้างอิงตำแหน่งไฟล์หลัก",
+    "Prioritized Next Actions: ลิสต์งานที่ต้องทำต่อเรียงตาม Priority",
+    "Decisions & Blockers Log บันทึกข้อจำกัดและปัญหาที่พบ"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="05"
+  title="Architecture Decision Record (ADR Standard)"
+  category="System Architecture"
+  filename="05-ADR_GUIDELINES_AND_TEMPLATE.md"
+  downloadUrl="/downloads/universal-skills/05-ADR_GUIDELINES_AND_TEMPLATE.md"
+  fileSize="3.5 KB"
+  description="เทมเพลตและแนวทางการบันทึกการตัดสินใจเชิงสถาปัตยกรรม บันทึกบริบท ทางเลือกที่พิจารณา ข้อดีข้อเสีย และผลกระทบที่ยอมรับได้"
+  highlights={[
+    "Context & Problem Framing: สาเหตุและที่มาของการตัดสินใจ",
+    "Decision Matrix & Options Comparison (Pros / Cons)",
+    "Consequences & Trade-offs เชิง Performance และ Maintenance",
+    "Lifecycle Management: Proposed / Accepted / Superseded / Deprecated"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="06"
+  title="Product Requirements & Technical Spec Template"
+  category="Product & Specification"
+  filename="06-PRD_AND_SPEC_TEMPLATE.md"
+  downloadUrl="/downloads/universal-skills/06-PRD_AND_SPEC_TEMPLATE.md"
+  fileSize="4.0 KB"
+  description="แม่แบบสำหรับการเขียน PRD และสเปกทางเทคนิค กำหนด User Stories, Data Schema, API Contracts และ Testable Acceptance Criteria"
+  highlights={[
+    "Problem Statement และ Non-Goals ป้องกัน Scope Creep",
+    "Data Models, Schema Definitions และ Error States ครบถ้วน",
+    "Testable Acceptance Criteria กำหนดเกณฑ์ส่งมอบงานชัดเจน",
+    "Deployment & Rollback Strategy สำหรับการนำขึ้น Production"
+  ]}
+/>
+
+<SkillDownloadCard
+  id="07"
+  title="AI Agent Workflow & Operating Rules"
+  category="Agent Guardrails"
+  filename="07-AGENTS_WORKFLOW_RULES.md"
+  downloadUrl="/downloads/universal-skills/07-AGENTS_WORKFLOW_RULES.md"
+  fileSize="4.5 KB"
+  description="กฎและกรอบการทำงานสำหรับ AI Coding Assistants (Antigravity, Cursor, Claude Code) เพื่อการทำงานที่ปลอดภัย ไม่ทำลายโค้ดเดิม และมี Verification Loop เสมอ"
+  highlights={[
+    "Inspect Before Edit: อ่านไฟล์จริงและประเมินผลกระทบก่อนเริ่มแก้ไข",
+    "Non-destructive Guardrails: ห้ามลบโค้ดหรือ Overwrite โดยไม่จำเป็น",
+    "Verification Loop: ทดสอบ Build / Lint / Test ยืนยันผลลัพธ์ทุกครั้ง",
+    "Concise & Structured Reporting สรุปงานกระชับ ไม่สร้างมลพิษทางข้อความ"
+  ]}
+/>
 
 ---
 
-### 1. 📐 Code Style & Clean Architecture Standard
-- **ไฟล์:** [`01-CODE_STYLE.md`](/downloads/universal-skills/01-CODE_STYLE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/01-CODE_STYLE.md)
-- **วัตถุประสงค์:** กำหนด "Engineering DNA" สากลที่ไม่ขึ้นกับภาษาโปรแกรม
-- **หัวใจสำคัญ:**
-  1. **Readability First:** โค้ดถูกเขียนเพื่อให้อ่านง่ายสำหรับมนุษย์ก่อนเสมอ
-  2. **Single Responsibility:** ฟังก์ชันและคลาสต้องมีเหตุผลเดียวในการเปลี่ยนแปลง
-  3. **Error Handling & Observability:** ห้ามกลืน Error (`except: pass`), ใช้ Structured Logging แทน `print()`, และลบ Debug Artifacts ออกก่อน Commit
-  4. **Security & State:** ห้าม Hardcode Secrets, ป้องกัน SQL Injection ด้วย Parameterized Query, และรักษา Unidirectional Data Flow
+## วิธีนำไปติดตั้งในโปรเจกต์ใหม่ (Quick Integration)
 
----
-
-### 2. 🔍 2-Axis AI Code Review Workflow
-- **ไฟล์:** [`02-AI_CODE_REVIEW_WORKFLOW.md`](/downloads/universal-skills/02-AI_CODE_REVIEW_WORKFLOW.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/02-AI_CODE_REVIEW_WORKFLOW.md)
-- **วัตถุประสงค์:** มาตรฐานการตรวจทาน Pull Request ทั้งสำหรับคนและ AI Reviewer
-- **หัวใจสำคัญ:**
-  1. **Two-Axis Paradigm:** ตรวจทั้ง **ความถูกต้องตามสเปก (Spec Match)** และ **ความสะอาดของสถาปัตยกรรม (Clean Code)**
-  2. **Checklists แยก Backend / Frontend:** ตรวจสอบ Layered Separation, State Management, และ Accessibility
-  3. **Severity Classification:** แบ่งระดับความรุนแรงชัดเจน (Critical ➔ High ➔ Medium ➔ Low) เพื่อบล็อกการ Merge ในจุดที่เสี่ยงต่อความปลอดภัย
-
----
-
-### 3. 🐳 Docker Workflow & Deployment Rules
-- **ไฟล์:** [`03-DOCKER_WORKFLOW_RULES.md`](/downloads/universal-skills/03-DOCKER_WORKFLOW_RULES.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/03-DOCKER_WORKFLOW_RULES.md)
-- **วัตถุประสงค์:** กฎการรัน Docker และ Container Automation สำหรับ AI Agents
-- **หัวใจสำคัญ:**
-  1. **Automated Change Detection:** สแกน `git status` เพื่อเลือกคำสั่ง Build/Up ที่เหมาะสมที่สุดโดยอัตโนมัติ (Category A: Code, B: Env, C: Single Service)
-  2. **Persistent Storage Protection:** ห้ามใช้ Flag ลบ Volume (`-v`) โดยไม่ได้รับอนุญาต รักษาข้อมูล Database และ Redis เสมอ
-  3. **Post-deploy Health Verification:** ตรวจสอบ HTTP 200 บน Health Check Endpoints ทุกครั้งหลัง Deploy
-
----
-
-### 4. 📑 Zero-Drift Context Handoff Protocol
-- **ไฟล์:** [`04-HANDOFF_PROTOCOL.md`](/downloads/universal-skills/04-HANDOFF_PROTOCOL.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/04-HANDOFF_PROTOCOL.md)
-- **วัตถุประสงค์:** แม่แบบสรุปสถานะโปรเจกต์ก่อนปิด Session หรือส่งต่องาน
-- **หัวใจสำคัญ:**
-  1. **System Map:** บันทึกโครงสร้างไดเรกทอรีและหน้าที่ของแต่ละส่วน
-  2. **Changelog & Milestones:** บันทึกสิ่งที่ทำเสร็จแล้วในรอบนี้พร้อมระบุ Scope
-  3. **Actionable Next Steps:** ระบุงานที่ต้องทำต่อทันทีตามลำดับความสำคัญ (Priority 1, 2, 3)
-
----
-
-### 5. 🏛️ Architecture Decision Records (ADR Standard)
-- **ไฟล์:** [`05-ADR_GUIDELINES_AND_TEMPLATE.md`](/downloads/universal-skills/05-ADR_GUIDELINES_AND_TEMPLATE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/05-ADR_GUIDELINES_AND_TEMPLATE.md)
-- **วัตถุประสงค์:** แม่แบบบันทึกการตัดสินใจทางสถาปัตยกรรม (Architecture Decisions)
-- **หัวใจสำคัญ:**
-  1. **Context & Problem Statement:** ทำไมถึงต้องตัดสินใจในเรื่องนี้
-  2. **Options Considered:** เปรียบเทียบทางเลือกพร้อม Pros / Cons
-  3. **Consequences & Trade-offs:** บันทึกผลกระทบเชิงบวกและข้อจำกัดที่ยอมรับได้
-
----
-
-### 6. 📄 Product Requirements Document (PRD & Spec Standard)
-- **ไฟล์:** [`06-PRD_AND_SPEC_TEMPLATE.md`](/downloads/universal-skills/06-PRD_AND_SPEC_TEMPLATE.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/06-PRD_AND_SPEC_TEMPLATE.md)
-- **วัตถุประสงค์:** แม่แบบการเขียน Requirement และ Technical Specification สำหรับฟีเจอร์ใหม่
-- **หัวใจสำคัญ:**
-  1. **User Stories:** ทำความเข้าใจผู้ใช้และเป้าหมายที่แท้จริง
-  2. **Technical Schema & Endpoints:** ออกแบบ Data Model และ API Contract ล่วงหน้า
-  3. **Acceptance Criteria:** กำหนด Checklists การตรวจรับงานที่วัดผลได้จริง
-
----
-
-### 7. 🤖 AI Agentic Operating Rules & Guardrails
-- **ไฟล์:** [`07-AGENTS_WORKFLOW_RULES.md`](/downloads/universal-skills/07-AGENTS_WORKFLOW_RULES.md) • [📥 ดาวน์โหลดไฟล์ .md](/downloads/universal-skills/07-AGENTS_WORKFLOW_RULES.md)
-- **วัตถุประสงค์:** กรอบและข้อบังคับสำหรับ AI Coding Assistants
-- **หัวใจสำคัญ:**
-  1. **Inspect Before Edit:** ต้องอ่านโค้ดจริงและประเมินผลกระทบ (Blast Radius) ก่อนแก้ไขเสมอ
-  2. **Non-destructive Terminal Ops:** ห้ามรันคำสั่งทำลายข้อมูลหรือ Force Push บน Branch หลัก
-  3. **Verification Loop:** ต้องรัน Build / Test ยืนยันผลลัพธ์ก่อนส่งมอบงานให้วิศวกร
-
----
-
-## 🚀 วิธีนำไปติดตั้งในโปรเจกต์ใหม่ (Quick Integration)
-
-### วิธีที่ 1: แปะไฟล์มาตรฐานลงในโฟลเดอร์ `docs/`
-ดาวน์โหลดไฟล์ `.zip` จากปุ่มด้านบน แล้วแตกไฟล์ไว้ในโปรเจกต์ของคุณ:
+### 1. วางไฟล์ลงในไดเรกทอรี `docs/standards`
+ดาวน์โหลดไฟล์ `.zip` จากปุ่มด้านบน แล้วแตกไฟล์ไว้ในโปรเจกต์:
 ```bash
-# 1. แตกไฟล์ลงในโฟลเดอร์ docs
+# สร้างไดเรกทอรีและแตกไฟล์
 mkdir -p docs/standards
 unzip forge-universal-engineering-skills.zip -d docs/standards/
-
-# 2. นำไฟล์ 01-CODE_STYLE.md ไปตั้งเป็น Rule หรือ Instruction ของ AI
-cp docs/standards/01-CODE_STYLE.md .cursorrules # สำหรับ Cursor
-cp docs/standards/01-CODE_STYLE.md CLAUDE.md    # สำหรับ Claude Code
 ```
 
-### วิธีที่ 2: รันผ่าน Script ของแล็บ
+### 2. กำหนดเป็น System Instruction ให้กับ AI Assistant
 ```bash
-./skills-agent/skills-main/scripts/link-skills.sh
+# สำหรับ Cursor IDE
+cp docs/standards/01-CODE_STYLE.md .cursorrules
+
+# สำหรับ Claude Code / Antigravity
+cp docs/standards/01-CODE_STYLE.md CLAUDE.md
 ```
 
 ---
 
-## 🏛️ Forge Solutions Lab
-ออกแบบและดูแลโดยทีมวิศวกร [Forge Solutions Lab](https://github.com/Forge-Solutions-Lab) — ยึดถือความเรียบง่าย ประสิทธิภาพ และมาตรฐานวิศวกรรมระดับสากล
+## หลักการออกแบบ UI/UX ที่นำมาประยุกต์ใช้ (Design Heuristics & Citations)
+
+การ์ดและหน้าเอกสารนี้ได้รับการปรับปรุงตามมาตรฐานวิศวกรรม UI/UX สากล:
+
+1. **Refactoring UI Principles (Steve Schoger & Adam Wathan):**
+   - *Eliminate Decorative Emoji Clutter:* หลีกเลี่ยงการใช้อิโมจิที่ไม่จำเป็นซึ่งลดทอนความเป็นมืออาชีพของเครื่องมือวิศวกรรม และแทนที่ด้วยความชัดเจนของ Typographic Hierarchy (น้ำหนักฟอนต์, ขนาด, และคอนทราสต์)
+   - *Functional Iconography:* ใช้ไอคอน SVG จาก Lucide ที่มีความหมายเฉพาะเจาะจงกับฟังก์ชัน (เช่น `Download`, `Copy`, `FileCode`, `ShieldCheck`)
+   - *Visual Weight & Action Hierarchy:* ปุ่มดาวน์โหลดหลัก (Primary Action) มีคอนทราสต์ชัดเจน ส่วนปุ่มดาวน์โหลดไฟล์ย่อย (Secondary Action) ใช้ Ghost/Bordered Style ที่สะอาดตา
+
+2. **Linear & Vercel Design Language:**
+   - ใช้ชุดสีพื้นผิว Dark-mode แบบมีมิติ (`bg-surface-subtle`, `border-color`, `hover:border-hover`)
+   - แสดงสถานะไฟล์ด้วย Monospace Metadata Chips (`RULE #01`, `4.2 KB`, `Architecture & Standards`)
+   - เพิ่มระบบ Expandable Code Drawer ให้ผู้ใช้ดูเนื้อหาโค้ดภายในหน้าได้ทันทีโดยไม่ต้องเปลี่ยนหน้า
+
+3. **Nielsen Norman Group (NN/g) Usability Heuristics:**
+   - *Direct Action Trigger:* ปุ่ม Download สั่ง Trigger Native Browser Blob Download ลงในเครื่องของผู้ใช้โดยตรง ไม่เปิดหน้าต่างเปล่าหรือบังคับให้ผู้ใช้ Copy มือ
+   - *System Status & Immediate Feedback:* มีสถานะแจ้งเตือน *"Downloading..."* และ *"Copied"* แบบเรียลไทม์เมื่อผู้ใช้กดใช้งาน

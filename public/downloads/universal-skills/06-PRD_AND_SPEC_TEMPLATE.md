@@ -1,14 +1,14 @@
-# 📄 Universal Product Requirements Document (PRD & Spec) Standard (Forge Standard)
+# Universal Product Requirements Document (PRD & Spec) Standard (Forge Standard)
 
 > มาตรฐานการเขียนข้อกำหนดความต้องการและสเปกของฟีเจอร์ (PRD & Technical Spec)
 > ช่วยให้ทีมพัฒนาและ AI Coding Assistant เข้าใจเป้าหมายตรงกัน และไม่หลุดขอบเขตงาน
 
 ---
 
-## 📋 PRD Document Template (`docs/prd/feature-name.md`)
+## PRD Document Template (`docs/prd/feature-name.md`)
 
 ```markdown
-# 📄 PRD: <ชื่อฟีเจอร์หรือระบบ>
+# PRD: <ชื่อฟีเจอร์หรือระบบ>
 
 - **Status**: Draft | In Review | Approved | Implemented
 - **Owner**: <ชื่อเจ้าของฟีเจอร์>

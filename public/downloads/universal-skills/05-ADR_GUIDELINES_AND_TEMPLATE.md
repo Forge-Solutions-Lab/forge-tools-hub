@@ -1,11 +1,11 @@
-# 🏛️ Universal Architecture Decision Record (ADR) Standard (Forge Standard)
+# Universal Architecture Decision Record (ADR) Standard (Forge Standard)
 
 > มาตรฐานการบันทึกการตัดสินใจทางสถาปัตยกรรม (Architecture Decision Records)
 > ใช้สำหรับบันทึกเหตุผล บริบท ข้อดีข้อเสีย และผลกระทบของการตัดสินใจเลือกเทคโนโลยีหรือออกแบบระบบ
 
 ---
 
-## 📋 ADR Document Template (`docs/adr/000X-title.md`)
+## ADR Document Template (`docs/adr/000X-title.md`)
 
 ```markdown
 # ADR-000X: <ชื่อการตัดสินใจ เช่น Single Source of Truth for Data Storage>
@@ -37,11 +37,11 @@
 ---
 
 ## 4. Consequences (ผลกระทบและสิ่งที่จะตามมา)
-### 🟢 Positive Consequences (ผลเชิงบวก)
+### Positive Consequences (ผลเชิงบวก)
 - ทำให้ระบบรองรับการขยายตัวได้ง่ายขึ้น
 - ลดความซับซ้อนของโค้ด
 
-### 🔴 Negative / Trade-offs (ข้อเสียหรือสิ่งที่ต้องแลก)
+### Negative / Trade-offs (ข้อเสียหรือสิ่งที่ต้องแลก)
 - ต้องมีการ Migrate ข้อมูลเดิม
 - มีการเรียนรู้เพิ่มเติมสำหรับคนในทีม
 

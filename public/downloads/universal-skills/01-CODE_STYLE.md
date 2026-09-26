@@ -1,4 +1,4 @@
-# 📐 Universal Code Style & Engineering Standards (Forge Standard)
+# Universal Code Style & Engineering Standards (Forge Standard)
 
 > มาตรฐานการเขียนโค้ดและการออกแบบระบบระดับวิศวกรรมสากล — ใช้เป็นแนวทางบังคับสำหรับวิศวกรทุกคนและ AI Coding Assistant ทุกตัวในทีม
 > เอกสารนี้ไม่ผูกมัดกับภาษาใดภาษาหนึ่ง (Language-Agnostic) แต่กำหนด "Engineering DNA" ที่ต้องคงอยู่เสมอ

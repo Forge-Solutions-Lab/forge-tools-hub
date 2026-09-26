@@ -1,4 +1,4 @@
-# 🔍 Universal AI Code Review Workflow (Forge Standard)
+# Universal AI Code Review Workflow (Forge Standard)
 
 > มาตรฐานและกระบวนการตรวจทานโค้ด (Code Review) แบบ 2 แกน — สำหรับใช้เป็น Instruction ให้ AI Reviewer หรือวิศวกรในทีมตรวจ Pull Request
 
@@ -47,7 +47,7 @@
 ## 4. โครงสร้างผลการ Review มาตรฐาน (Output Format)
 
 ```markdown
-### 📋 Code Review Summary
+### Code Review Summary
 - **Verdict:** [PASS / REQUEST_CHANGES]
 - **Summary:** ภาพรวมคุณภาพของโค้ดใน PR นี้
 
